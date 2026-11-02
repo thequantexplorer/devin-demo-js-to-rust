@@ -12,7 +12,8 @@ pub fn round_half_even(value: f64) -> Result<i64> {
     // Float math can leave 0.5 as 0.4999999999 (e.g. 1010 * 0.05).
     const EPSILON: f64 = 1e-9;
     let rounded = if (diff - 0.5).abs() < EPSILON {
-        if floor % 2.0 == 1.0 {
+        // floor % 2.0 is -1.0 for negative odd floors, so compare against 0.
+        if floor % 2.0 != 0.0 {
             floor + 1.0
         } else {
             floor
