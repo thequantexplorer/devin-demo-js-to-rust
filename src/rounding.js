@@ -14,7 +14,8 @@ export function roundHalfEven(value) {
   // Float math can leave 0.5 as 0.4999999999 (e.g. 1010 * 0.05).
   const EPSILON = 1e-9;
   if (Math.abs(diff - 0.5) < EPSILON) {
-    return floor % 2 === 1 ? floor + 1 : floor;
+    // floor % 2 is -1 for negative odd floors, so compare against 0.
+    return floor % 2 !== 0 ? floor + 1 : floor;
   }
   return Math.round(value);
 }
