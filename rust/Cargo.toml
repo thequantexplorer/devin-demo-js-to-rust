@@ -1,0 +1,9 @@
+[package]
+name = "ledger-kit"
+version = "1.4.0"
+edition = "2021"
+description = "Rust port of @acme/ledger-kit: integer-cent money math, half-even rounding and payment terms."
+license = "MIT"
+publish = false
+
+[dependencies]
