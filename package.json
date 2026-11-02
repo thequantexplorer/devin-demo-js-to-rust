@@ -1,0 +1,21 @@
+{
+  "name": "@acme/ledger-kit",
+  "version": "1.4.0",
+  "description": "Small date and money helpers for invoicing: integer-cent math, half-even rounding and payment terms.",
+  "type": "module",
+  "exports": "./src/index.js",
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "test": "vitest run"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "vitest": "3.2.7"
+  }
+}
